@@ -11,7 +11,8 @@ const routes: Routes = [
   {
     path:'publish',
     component:PublishComponent
-  }
+  },
+  { path: '',   redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({

@@ -7,7 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class DataService {
-  serverUrl='http://localhost:3000/';
+  serverUrl='https://lit-thicket-28326.herokuapp.com/';
   tagPayload:any[]=[];
   tagsSkeleton: any[] = [
     {

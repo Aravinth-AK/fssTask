@@ -12,6 +12,7 @@ export interface DialogData {
   templateUrl: './modal-box.component.html',
   styleUrls: ['./modal-box.component.scss']
 })
+
 export class ModalBoxComponent implements OnInit {
 inputType=['text','number','email','password'];
 changeLoad:any[]=[];
