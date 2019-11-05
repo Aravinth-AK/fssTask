@@ -1,0 +1,77 @@
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+[mwlDraggable] {
+  background-color: #e9b875b3;
+  width: 182px;
+  height: 51px;
+  position: relative;
+  float: left;
+  margin-right: 10px;
+  cursor: move;
+  margin-top: 10px;
+}
+
+[mwlDroppable] {
+  background-color: #4cbc3c6b;
+  width: 400px;
+  height: 500px;
+  position: relative;
+  top: 10px;
+
+}
+
+[mwlDraggable],
+[mwlDroppable] {
+  color: white;
+
+}
+
+.drop-over-active {
+  border: dashed 1px black;
+  background-color: lightgreen;
+}
+
+.drag-active {
+  z-index: 3;
+}
+
+@mixin button-bg($bg) {
+  background: $bg;
+  &:hover {
+    background:darken($bg,8%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background:darken($bg,25%);
+  }
+}
+.design-box{
+  text-align: center;
+  }
+
+  .design-EL{
+margin-top: 20px;
+  }
+
+button,input{
+  margin-top: 20px !important;
+}
+
+
+
+
+
+
+html {
+  overflow:   scroll;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}

@@ -1,0 +1,42 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>FSS</span>
+
+      <span class="example-spacer"></span>
+       <button mat-button (click)="onPublish()">
+        Publish
+        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example publish icon">publish</mat-icon>
+
+      </button>
+    </mat-toolbar-row>
+    </mat-toolbar>
+
+    <div class="row">
+        <div class="col-md-4">
+            <button mat-button mwlDraggable [dropData]="tagsArray[0]" dragActiveClass="drag-active" [id]="tagsArray[0].id">Input Box</button>
+            <button mat-button [dropData]="tagsArray[1]" color="accent" mwlDraggable [dropData]="selectbox" dragActiveClass="drag-active" [id]="tagsArray[1].id">Select Box</button>
+            <button mat-button mwlDraggable [dropData]="tagsArray[2]" dragActiveClass="drag-active" [id]="tagsArray[2].id">Checkbox</button>
+            <button mat-button mwlDraggable [dropData]="tagsArray[3]" dragActiveClass="drag-active" [id]="tagsArray[3].id">Radio</button>
+            <button mat-button mwlDraggable [dropData]="tagsArray[4]" dragActiveClass="drag-active" [id]="tagsArray[4].id">Button</button>
+          </div>
+        <div class="col-md-4 " >
+            <div class="one design-box" #one
+            mwlDroppable
+            (drop)="onDrop($event)"
+            dragOverClass="drop-over-active">
+
+           </div>
+        </div>
+        <div class="col-md-4 design-box">
+            <h4>JSON Payload</h4>
+            <div>
+              <pre>  {{tagPayload |json }}</pre>
+
+            </div>
+          </div>
+      </div>
+
+
+
+
+

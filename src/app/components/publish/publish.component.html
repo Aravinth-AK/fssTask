@@ -1,0 +1,74 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>FSS</span>
+
+      <span class="example-spacer"></span>
+
+      <button mat-button (click)="onDownload()">
+        Download
+        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example download icon">publish</mat-icon>
+
+      </button>
+    </mat-toolbar-row>
+    </mat-toolbar>
+<body class="hm-gradient">
+
+  <main>
+
+      <!--MDB Forms-->
+      <div class="container mt-4">
+
+
+          <div class="row box-sheet">
+              <!-- Grid column -->
+              <div class="col-md-8 mb-4">
+                  <div class="card">
+                      <div class="card-body">
+                          <!-- Form register -->
+                              <h3 class="text-center pink-text font-bold py-4"><strong></strong></h3>
+
+                          <form *ngFor="let item of valueArray">
+                              <div class="md-form field-control" *ngIf="item.name == 'input'">
+                                  <i class="fa fa-user prefix grey-text"></i>
+                                  <input [type]="item.type" id="orangeForm-name37" class="form-control cutom-box" [value]="item.value">
+                              </div>
+                              <div class="md-form field-control" *ngIf="item.name == 'select'">
+                                  <i class="fa fa-envelope prefix grey-text"></i>
+                                  <select  id="orangeForm-email37" >
+                                    <option></option>
+                                  </select>
+
+                              </div>
+                              <div class="checkbox checkbox-primary field-control" *ngIf="item.name == 'radio'">
+                                <input id="checkbox2" type="checkbox" checked="">
+                                <label for="checkbox2">
+                                               {{item.label}}
+                                            </label>
+                              </div>
+                              <div class="checkbox checkbox-info checkbox-circle field-control" *ngIf="item.name == 'checkbox'">
+                                <input id="checkbox8" type="checkbox" checked="">
+                                <label for="checkbox8">
+                                  {{item.label}}
+                                            </label>
+                              </div>
+                              <div class="text-center py-4" *ngIf="item.name == 'button'">
+                                  <button class="btn btn-outline-pink"> <i class="fa fa-paper-plane-o ml-1"></i>{{item.label}}</button>
+                              </div>
+                          </form>
+                          <!-- Form register -->
+                      </div>
+                  </div>
+              </div>
+              <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+
+          <hr class="my-4">
+
+
+      </div>
+      <!--MDB Forms-->
+
+  </main>
+
+</body>

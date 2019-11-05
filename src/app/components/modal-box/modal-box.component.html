@@ -1,0 +1,39 @@
+<h1 mat-dialog-title>set property for the input type</h1>
+<div mat-dialog-content class="box-design">
+    <mat-form-field *ngIf="changeVar.name=='input'">
+        <mat-label>Input type</mat-label>
+        <mat-select [(ngModel)]="changeVar.type">
+          <mat-option *ngFor="let type of inputType" [value]="type">
+            {{type}}
+          </mat-option>
+        </mat-select>
+        <br>
+      </mat-form-field>
+
+
+      <mat-form-field class="example-full-width" *ngIf="changeVar.name=='input'">
+          <input matInput placeholder="Value" [(ngModel)]="changeVar.value">
+          <br>
+        </mat-form-field>
+
+
+
+
+      <mat-form-field class="example-full-width" *ngIf="changeVar.name=='input'">
+        <input matInput placeholder="Value" [(ngModel)]="changeVar.value">
+        <br>
+      </mat-form-field>
+
+
+
+    <mat-form-field class="example-full-width" *ngIf="changeVar.name=='checkbox' || changeVar.name=='radio' || changeVar.name=='button'" >
+      <input matInput placeholder="label name" [(ngModel)]="changeVar.label">
+      <br>
+    </mat-form-field>
+
+</div>
+<div mat-dialog-actions >
+
+    <button mat-button cdkFocusInitial mat-dialog-close>cancel</button>
+    <button mat-button [mat-dialog-close]="changeVar">Apply</button>
+  </div>
